@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="add1" class="org.katheer.bean.Address"
+          p:firstLine="4/167, Akshaya Nagar, MM Kovilur Pirivu"
+          p:secondLine="Seelapadi PO, Dindigul" p:pin="624005" autowire-candidate="false"/>
+
+    <bean id="add2" class="org.katheer.bean.Address"
+          p:firstLine="4/327A, Mahalakshmi Nagar, MM Kovilur Pirivu"
+          p:secondLine="Seelapadi PO, Dindigul" p:pin="624005"/>
+
+    <bean id="std1" class="org.katheer.bean.Student"
+          autowire="constructor">
+        <constructor-arg value="Abdul Katheer" index="0"/>
+        <constructor-arg value="S101" index="2"/>
+    </bean>
+</beans>
